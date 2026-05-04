@@ -3,12 +3,12 @@
  * Do not edit manually.
  */
 
+import type { GetPreferencesUnitsQueryResponse } from "../types/GetPreferencesUnits.ts";
 import type {
   Client,
   RequestConfig,
   ResponseErrorConfig,
-} from "../../client.ts";
-import type { GetPreferencesUnitsQueryResponse } from "../types/GetPreferencesUnits.ts";
+} from "@kubb/plugin-client/clients/axios";
 import type {
   QueryKey,
   QueryClient,

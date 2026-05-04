@@ -3,13 +3,13 @@
  * Do not edit manually.
  */
 
-import fetch from "../../client.ts";
+import fetch from "@kubb/plugin-client/clients/axios";
+import type { GetPreferencesUnitsQueryResponse } from "../types/GetPreferencesUnits.ts";
 import type {
   Client,
   RequestConfig,
   ResponseErrorConfig,
-} from "../../client.ts";
-import type { GetPreferencesUnitsQueryResponse } from "../types/GetPreferencesUnits.ts";
+} from "@kubb/plugin-client/clients/axios";
 
 function getGetPreferencesUnitsUrl() {
   const res = { method: "GET", url: `/preferences/units/` as const };

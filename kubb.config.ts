@@ -11,16 +11,5 @@ export default defineConfig(({ watch }) => ({
     path: "./src/generated",
     prettier: false,
   },
-  plugins: [
-    pluginOas(),
-    pluginTs(),
-    pluginClient({
-      importPath: "../../client.ts",
-      output: { path: "clients" },
-    }),
-    pluginReactQuery({
-      client: { importPath: "../../client.ts" },
-      output: { path: "hooks" },
-    }),
-  ],
+  plugins: [pluginOas(), pluginTs(), pluginClient(), pluginReactQuery()],
 }));
