@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Unique identifier",
+      "example": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": ["area", "density", "length"],
+      "description": "The type of the unit",
+      "example": "length"
+    },
+    "value": {
+      "type": "string",
+      "description": "The preferred unit of the user for the given type",
+      "example": "_U_LENGTH_CM"
+    }
+  },
+  "required": ["id", "type", "value"],
+  "x-readme-ref-name": "Unit"
+}

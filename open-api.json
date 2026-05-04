@@ -1,0 +1,80 @@
+{
+  "externalDocs": {
+    "description": "View the raw OpenAPI Specification in JSON format",
+    "url": "/swagger.json"
+  },
+  "info": {
+    "title": "Open API Specification",
+    "version": "0.0.0"
+  },
+  "openapi": "3.1.0",
+  "components": {
+    "schemas": {
+      "Unit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Unique identifier",
+            "example": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": ["area", "density", "length"],
+            "description": "The type of the unit",
+            "example": "length"
+          },
+          "value": {
+            "type": "string",
+            "description": "The preferred unit of the user for the given type",
+            "example": "_U_LENGTH_CM"
+          }
+        },
+        "required": ["id", "type", "value"]
+      }
+    },
+    "parameters": {}
+  },
+  "paths": {
+    "/preferences/units/": {
+      "get": {
+        "tags": ["Preferences"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "description": "Unique identifier",
+                        "example": 1
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": ["area", "density", "length"],
+                        "description": "The type of the unit",
+                        "example": "length"
+                      },
+                      "value": {
+                        "type": "string",
+                        "description": "The preferred unit of the user for the given type",
+                        "example": "_U_LENGTH_CM"
+                      }
+                    },
+                    "required": ["id", "type", "value"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "webhooks": {}
+}

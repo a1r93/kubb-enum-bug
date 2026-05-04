@@ -1,0 +1,26 @@
+{
+  "name": "kubb-enum-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "kubb generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.29.2",
+  "dependencies": {
+    "@tanstack/react-query": "^5.100.9"
+  },
+  "devDependencies": {
+    "@kubb/cli": "^4.37.5",
+    "@kubb/core": "^4.37.5",
+    "@kubb/plugin-client": "^4.37.5",
+    "@kubb/plugin-oas": "^4.37.5",
+    "@kubb/plugin-react-query": "^4.37.5",
+    "@kubb/plugin-ts": "^4.37.5",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
+  }
+}
